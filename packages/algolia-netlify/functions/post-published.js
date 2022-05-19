@@ -1,7 +1,6 @@
 const IndexFactory = require('@tryghost/algolia-indexer');
 const transforms = require('@tryghost/algolia-fragmenter');
 
-// vậy là không còn
 exports.handler = async (event) => {
     if (process.env.ALGOLIA_ACTIVE !== 'TRUE') {
         return {
