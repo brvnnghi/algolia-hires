@@ -85,7 +85,7 @@ module.exports.transformToAlgoliaObject = (posts, ignoreSlugs) => {
             slug: post.slug,
             url: post.url,
             html: post.html,
-            heading: post.excerpt,
+            headings: post.excerpt,
             image: post.feature_image,
             title: post.title,
             tags: [],
@@ -112,7 +112,7 @@ module.exports.transformToAlgoliaObject = (posts, ignoreSlugs) => {
             });
         }
 
-        algoliaPost.authors.push({name: primary_author.name, slug: primary_author.slug});
+        algoliaPost.authors.push({name: post.primary_author.name, slug: post.primary_author.slug});
 
         algoliaObjects.push(algoliaPost);
 
