@@ -42,7 +42,7 @@ exports.handler = async (event) => {
         const index = new IndexFactory(algoliaSettings);
         await index.setSettingsForIndex();
         await index.save(fragments);
-        console.log('Fragments successfully saved to Algolia index'); // eslint-disable-line no-console
+        console.log(`Fragments "${post.authors}" successfully saved to Algolia index`); // eslint-disable-line no-console
         return {
             statusCode: 200,
             body: `Post "${post.title}" has been added to the index.`
