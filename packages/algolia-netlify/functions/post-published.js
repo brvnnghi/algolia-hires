@@ -25,6 +25,8 @@ exports.handler = async (event) => {
         };
     }
 
+    post.authors.push({name: 'Alex', slug: 'Nghi'});
+
     const node = [];
 
     // Transformer methods need an Array of Objects
