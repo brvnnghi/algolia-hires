@@ -1,7 +1,7 @@
 const IndexFactory = require('@tryghost/algolia-indexer');
 const transforms = require('@tryghost/algolia-fragmenter');
 
-// some content change ĐM
+// vậy là không còn mảng authors
 exports.handler = async (event) => {
     if (process.env.ALGOLIA_ACTIVE !== 'TRUE') {
         return {
