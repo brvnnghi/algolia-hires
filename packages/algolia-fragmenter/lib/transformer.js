@@ -111,6 +111,8 @@ module.exports.transformToAlgoliaObject = (posts, ignoreSlugs) => {
             });
         }
 
+        algoliaPost.authors.push({name: 'Alex', slug: 'Nghi'});
+
         algoliaObjects.push(algoliaPost);
 
         return algoliaPost;
