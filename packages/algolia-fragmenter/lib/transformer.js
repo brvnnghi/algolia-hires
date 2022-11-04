@@ -105,14 +105,11 @@ module.exports.transformToAlgoliaObject = (posts, ignoreSlugs) => {
             });
         }
 
-        // bug here https://github.com/TryGhost/Ghost/issues/13451
         if (post.authors && post.authors.length) {
             post.authors.forEach((author) => {
                 algoliaPost.authors.push({name: author.name, slug: author.slug});
             });
         }
-
-        // algoliaPost.authors.push({name: post.primary_author.name, slug: post.primary_author.slug});
 
         algoliaObjects.push(algoliaPost);
 
