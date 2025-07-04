@@ -1,15 +1,16 @@
 [build]
   base = "packages/algolia-netlify"
-  command = "NODE_ENV=production yarn build"
+  command = "yarn build"
   functions = "build/functions"
   publish = ""
 
 [build.environment]
-  NODE_VERSION = "16"
-  AWS_LAMBDA_JS_RUNTIME = "nodejs16.x"
+  NODE_VERSION = "18"
+  AWS_LAMBDA_JS_RUNTIME = "nodejs18.x"
 
 [template.environment]
   ALGOLIA_ACTIVE = "TRUE or FALSE. Set to TRUE to trigger indexing."
   ALGOLIA_APP_ID = "Algolia Application ID"
   ALGOLIA_API_KEY = "An Algolia Admin API Key or a generated one"
   ALGOLIA_INDEX = "Name of the Algolia index"
+  NETLIFY_KEY = "User-defined key to authorize post requests to the Netlify function"

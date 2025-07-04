@@ -1,6 +1,6 @@
 {
   "name": "@tryghost/algolia-indexer",
-  "version": "0.2.1",
+  "version": "0.3.1",
   "repository": "https://github.com/TryGhost/algolia/tree/master/packages/algolia-indexer",
   "author": "Ghost Foundation",
   "license": "MIT",
@@ -19,12 +19,12 @@
     "access": "public"
   },
   "devDependencies": {
-    "mocha": "10.0.0",
+    "mocha": "10.2.0",
     "should": "13.2.3",
-    "sinon": "14.0.0"
+    "sinon": "17.0.1"
   },
   "dependencies": {
-    "@tryghost/errors": "1.2.15",
-    "algoliasearch": "4.14.2"
+    "@tryghost/errors": "1.2.27",
+    "algoliasearch": "4.20.0"
   }
 }

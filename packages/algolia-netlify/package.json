@@ -1,18 +1,16 @@
 {
   "name": "@tryghost/algolia-netlify",
-  "version": "0.1.13",
+  "version": "0.3.4",
   "repository": "https://github.com/TryGhost/algolia/tree/master/packages/algolia-netlify",
   "author": "Ghost Foundation",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "dev": "yarn serve",
+    "dev": "yarn build && netlify dev",
     "test": "NODE_ENV=testing mocha './test/**/*.test.js'",
     "lint": "eslint . --ext .js --cache",
     "posttest": "yarn lint",
-    "postinstall": "netlify-lambda install functions",
-    "serve": "yarn build && netlify dev",
-    "build": "mkdir -p build/site && netlify-lambda build functions"
+    "build": "NODE_ENV=production netlify functions:build --functions build/functions --src functions"
   },
   "files": [
     "index.js",
@@ -35,19 +33,17 @@
     "build/*"
   ],
   "devDependencies": {
-    "eslint": "8.22.0",
+    "eslint": "8.54.0",
     "eslint-config-airbnb-base": "15.0.0",
-    "eslint-plugin-ghost": "2.15.1",
-    "eslint-plugin-import": "2.26.0",
-    "mocha": "10.0.0",
+    "eslint-plugin-ghost": "3.4.0",
+    "eslint-plugin-import": "2.29.0",
+    "mocha": "10.2.0",
+    "netlify-cli": "16.3.1",
     "should": "13.2.3",
-    "sinon": "14.0.0"
+    "sinon": "17.0.1"
   },
   "dependencies": {
-    "@tryghost/algolia-fragmenter": "^0.2.4",
-    "@tryghost/algolia-indexer": "^0.2.1",
-    "dotenv-webpack": "8.0.1",
-    "netlify-lambda": "2.0.15",
-    "webpack": "5.74.0"
+    "@tryghost/algolia-fragmenter": "^0.2.7",
+    "@tryghost/algolia-indexer": "^0.3.1"
   }
 }
